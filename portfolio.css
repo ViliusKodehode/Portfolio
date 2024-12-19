@@ -1,0 +1,210 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.backgroundvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.maincontainer {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.planet {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+.mainplanet {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 80px;
+    padding-left: 35px;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: url(/Grafficfiles/mainplanet.png);
+    background-size: cover;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    z-index: 2;
+}
+.maintext1{
+    background-color: white;
+    font-size: 28px;
+    color: black;
+    opacity: 0.8;
+    border-radius: 30px;
+}
+.maintext2{
+    background-color: white;
+    font-size: 14px;
+    color: black;
+    opacity: 0.8;
+    border-radius: 30px; 
+}
+.orbit-container {
+    position: absolute;
+    width: 1200px;
+    height: 1200px;
+    border-radius: 50%;
+    animation: spin 15s linear infinite;
+}
+.cv{
+    background-image: url(/Grafficfiles/planet2.png);
+    background-size: cover;
+    background-position: center;
+    width: 220px;
+    height: 220px;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 48px;
+}
+.projects{
+    background-image: url(/Grafficfiles/planet3.png);
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 48px;
+    width: 320px;
+    height: 320px;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.skills{
+    background-image: url(/Grafficfiles/planet4.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    height: 250px;
+    width: 250px;
+    font-size: 48px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contact {
+    background-image: url(/Grafficfiles/planet5.png);
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 48px;
+    width: 220px;
+    height: 220px;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+}
+.api{
+    background-image: url(/Grafficfiles/planet1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 24px;
+    top: 25%;
+    left: 25%;
+}
+.paused {
+    animation-play-state: paused !important;
+}
+.planetcontent {
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    width: 60vw;
+    height: 70vh;
+    padding: 20px;
+    background-color: #e7d4d3;
+    color: rgb(1, 1, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgb(0,0,0,0.3);
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
+}
+.close-brn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+/* .close-brn:hover {
+    transform: scale(1.2);
+} */
+.popupheader{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    width: 80%;
+    height: 200px;
+}
+.popupbody{
+    font-size: 1.2rem;
+    text-align: center;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
