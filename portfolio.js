@@ -65,19 +65,33 @@ popup.className = "planetcontent";
 
 const closeButton = document.createElement("button");
 closeButton.className = "close-btn";
-closeButton.textContent = "×"; 
-popup.appendChild(closeButton);
+closeButton.textContent = "x"; 
 
-// const popupmaincontainer = document.createElement("div");
-// popupmaincontainer.className = "popupmaincontainer";
+ const popupmaincontainer = document.createElement("div");
+ popupmaincontainer.className = "popupmaincontainer";
 
 const popupHeader = document.createElement("div");
 popupHeader.className = "popupheader";
-popup.appendChild(popupHeader);
+
+const popupHeadertitle = document.createElement("div");
+popupHeadertitle.className = "popupheadertitle";
 
 const popupBody = document.createElement("div");
 popupBody.className = "popupbody";
-popup.appendChild(popupBody);
+
+const popupclosearea = document.createElement("div");
+popupclosearea.className = "popupclosearea";
+
+const blankarea = document.createElement("div");
+blankarea.className = "blankarea";
+
+popupmaincontainer.appendChild(popupclosearea);
+popupclosearea.appendChild(blankarea);
+popupclosearea.appendChild(closeButton)
+popupHeadertitle.appendChild(popupHeader)
+popupmaincontainer.appendChild(popupHeadertitle);
+popupmaincontainer.appendChild(popupBody);
+popup.appendChild(popupmaincontainer);
 document.body.appendChild(popup);
 
 closeButton.addEventListener("click",() => {
@@ -87,11 +101,10 @@ closeButton.addEventListener("click",() => {
 
 const planetElements = document.querySelectorAll(".planet");
 
-planetElements.forEach((planet) => {
-    planet.addEventListener("click", () => {
+planetElements.forEach((planetElements,index) => {
+    planetElements.addEventListener("click", () => {
         orbitContainer.classList.add("paused");
-        popupHeader.textContent = planet.textContent;
-        popupBody.textContent = `<p>${planet.textContent} Content</p>`;
+        popup.id = planets[index].name
         popup.style.display = "flex";
     });
 });
