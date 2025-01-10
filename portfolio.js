@@ -26,15 +26,23 @@ mainplanet.classList.add("mainplanet");
 const maintext1 = document.createElement("h1");
 maintext1.className = "maintext1"
 maintext1.textContent = "Vilius Jurevicius"
-const maintext2 = document.createElement('p');
+const maintext2 = document.createElement('pre');
 maintext2.className = "maintext2"
 maintext2.textContent = `
-Portfolio pitch
-text text
-text text
-text text
+Im an enthusiastic 
+web developer with skills 
+in HTML, CSS, 
+JavaScript and Figma. 
+Im currently expanding my 
+expertise through a 
+full-stack developer course, 
+where I have been working 
+on creating responsive 
+and user-friendly web applications. 
+I love solving problems through code
+and bringing ideas to life 
+with clean and creative designs.
 `
-
 mainplanet.appendChild(maintext1)
 mainplanet.appendChild(maintext2);
 maincontainer.appendChild(mainplanet);
@@ -59,6 +67,8 @@ planets.forEach((item) => {
     planet.textContent = item.text;
     orbitContainer.appendChild(planet);
 });
+
+////////////////// Popup 
 
 const popup = document.createElement("div");
 popup.className = "planetcontent";
@@ -96,15 +106,75 @@ document.body.appendChild(popup);
 
 closeButton.addEventListener("click",() => {
     popup.style.display = "none";
-    orbitContainer.classList.remove("paused");
+    // orbitContainer.classList.remove("paused");
 });
 
 const planetElements = document.querySelectorAll(".planet");
 
 planetElements.forEach((planetElements,index) => {
     planetElements.addEventListener("click", () => {
-        orbitContainer.classList.add("paused");
-        popup.id = planets[index].name
+        // orbitContainer.classList.add("paused");
+        popup.id = planets[index].name;
+        popupBody.id = planets[index].name + "popupbody";
         popup.style.display = "flex";
-    });
+
+        while(popupBody.firstChild) {
+            popupBody.removeChild(popupBody.firstChild);
+        }
+
+        if (popup.id === "cv") {
+            const headerTitle = popupHeadertitle.querySelector("div");
+            headerTitle.textContent = "CV";
+        
+        for (let i = 1; i <= 5; i++) {
+            const cvcontent = document.createElement("div");
+            cvcontent.className = "cvcontent";
+            popupBody.appendChild(cvcontent);
+        
+        for (let j = 1; j <= 2; j++){
+            const cvContentElement = document.createElement("div");
+            cvContentElement.className = "cvContentElement";
+            cvContentElement.id = "cvcontentelement" + j;
+            // cvContentElement.textContent = " Content of cv ";
+            cvcontent.appendChild(cvContentElement);
+        }}};
+        if (popup.id === "projects") {
+            const headerTitle = popupHeadertitle.querySelector("div");
+            headerTitle.textContent = "Projects";
+            for (let i = 1; i <= 5; i++) {
+                const projectcontent = document.createElement("div");
+                projectcontent.className = "projectcontent";
+                popupBody.appendChild(projectcontent);
+            
+        }};
+        if (popup.id === "skills") {
+            const headerTitle = popupHeadertitle.querySelector("div");
+            headerTitle.textContent = "Skills";
+            for (let i = 1; i <= 5; i++) {
+                const skillcontent = document.createElement("div");
+                skillcontent.className = "skillcontent";
+                popupBody.appendChild(skillcontent);
+            
+        }};
+        if (popup.id === "contact") {
+            const headerTitle = popupHeadertitle.querySelector("div");
+            headerTitle.textContent = "Contact";
+            for (let i = 1; i <= 1; i++) {
+                const contactcontent = document.createElement("div");
+                contactcontent.className = "contactcontent";
+                popupBody.appendChild(contactcontent);
+            
+        }};
+        if (popup.id === "api") {
+            const headerTitle = popupHeadertitle.querySelector("div");
+            headerTitle.textContent = "API";
+            for (let i = 1; i <= 1; i++) {
+                const apicontent = document.createElement("div");
+                apicontent.className = "apicontent";
+                popupBody.appendChild(apicontent);
+            
+        }}
 });
+});
+// education, experriences,skills,languages,hobbies
+
