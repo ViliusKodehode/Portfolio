@@ -138,14 +138,15 @@ planetElements.forEach((planetElements,index) => {
         cvmainheader.textContent = "Vilius Jurevicius"
         const cvmaintext = document.createElement("pre")
         cvmaintext.className = "cvmaintext"
-        cvmaintext.textContent = `Small description about myself
-        text come later
-        text come later
-        text come later
-        text come later
-        text come later
-        text come later
+        cvmaintext.textContent = `Jeg er en kreativ og måørettet person med solid kompetanse innen
+        HTML, CSS, JavaScript, React og Pyhton.
+        For tiden bygger jeg videre på mine ferdigheter gjennom praktiske prosjekter som fullstack utvikler.
+        fullstack utvikler.Jer er rask til å lære nye teknologier, strukturet i arbeidsmetoden,
+        og dedikert til å levere  kvalitetsresultater.
+        Men en sterk  interesse for problemløsning og effektivitet, 
+        trives jeg både i team og med selvstending arbeid. 
         `
+
         cvmaintext.className = "cvmaintext";
         cvmaininfo.appendChild(cvmaininfo1div);
         cvmaininfo.appendChild(cvmaininfo2div);
@@ -153,10 +154,13 @@ planetElements.forEach((planetElements,index) => {
         cvmaininfo2div.appendChild(cvmaintext);
         popupBody.appendChild(cvmaininfo);
         
-        for (let i = 1; i <= 4; i++) {
+        for (let i = 1; i <= 6; i++) {
             const cvcontent = document.createElement("div");
             cvcontent.classList.add ("cvcontent");
             popupBody.appendChild(cvcontent);
+
+            const uniqueId = `cvcontent${i}`;
+            cvcontent.id = uniqueId;
         
         for (let j = 1; j <= 2; j++){
             const cvContentElement = document.createElement("div");
@@ -168,16 +172,257 @@ planetElements.forEach((planetElements,index) => {
             cvcontent.appendChild(cvContentElement);
 
             if (uniqueId === "cvcontentelement1-1") {
-                cvContentElement.textContent = "Education";
+                cvContentElement.textContent = "Utdanning";
             };
+            if (uniqueId === "cvcontentelement1-2") {
+
+                const educationh1 = document.createElement("h1");
+                const educationtext1 = document.createElement("pre")
+                const educationh2 = document.createElement("h1");
+                const educationtext2 = document.createElement("pre")
+                const educationh3 = document.createElement("h1");
+                const educationtext3 = document.createElement("pre")
+
+                educationh1.className = "educationtitle";
+                educationh2.className = "educationtitle";
+                educationh3.className = "educationtitle";
+                educationtext1.className = "educationtext";
+                educationtext2.className = "educationtext";
+                educationtext3.className = "educationtext";
+
+                educationh1.textContent = "Videregående utdanning Vg2";
+                educationtext1.textContent = `
+                IKT-servicefag
+                Ulstein Vidaregaånde skule
+                2018 September – 2019 June   
+                `;
+
+                educationh2.textContent = "Videregående utdanning Vg2";
+                educationtext2.textContent = `
+                Byggteknikk
+                Herøy Vidaregaånde skule
+                2017 September – 2018 Juli   
+                `;
+
+                educationh3.textContent = "Videregående utdanning Vg1";
+                educationtext3.textContent = `
+                Bygg og anleggsteknikk
+                Herøy Vidaregaånde skule
+                2016 September – 2017 Juli  
+                `;
+
+                cvContentElement.appendChild(educationh1);
+                cvContentElement.appendChild(educationtext1);
+                cvContentElement.appendChild(educationh2);
+                cvContentElement.appendChild(educationtext2);
+                cvContentElement.appendChild(educationh3);
+                cvContentElement.appendChild(educationtext3);
+            };
+
             if (uniqueId === "cvcontentelement2-1") {
-                cvContentElement.textContent = "Experiences";
+                cvContentElement.textContent = "Arbeiderfaring";
             };
+            if (uniqueId === "cvcontentelement2-2") {
+
+                const workh1 = document.createElement("h1");
+                const worktext1 = document.createElement("pre")
+                const workh2 = document.createElement("h1");
+                const worktext2 = document.createElement("pre")
+                const workh3 = document.createElement("h1");
+                const worktext3 = document.createElement("pre")
+                const workh4 = document.createElement("h1");
+                const worktext4 = document.createElement("pre")
+                const workh5 = document.createElement("h1");
+                const worktext5 = document.createElement("pre")
+
+                workh1.className = "worktitle";
+                workh2.className = "worktitle";
+                workh3.className = "worktitle";
+                workh4.className = "worktitle";
+                workh5.className = "worktitle";
+                worktext1.className = "worktext";
+                worktext2.className = "worktext";
+                worktext3.className = "worktext";
+                worktext4.className = "worktext";
+                worktext5.className = "worktext";
+
+                workh1.textContent = "Arbeidpraksis at Ulstein Ulshav";
+                worktext1.textContent = `
+                En rekke arbeider fra pakking av frukt
+                til programmering
+                2021-2023   
+                `;
+
+                workh2.textContent = "Praksisplass på Furene Volda";
+                worktext2.textContent = `
+                Som IKT medarbeider
+                2020 Mars
+                `;
+
+                workh3.textContent = "Praksisplass på Ulstein vidaregaånde skule";
+                worktext3.textContent = `
+                IKT servicefag Ulstein VGS
+                2019 Mars     
+                `;
+
+                workh4.textContent = "Praksisplass på Kleven Veft As";
+                worktext4.textContent = `
+                IKT servicefag Ulstein VGS
+                2019 Mars     
+                `;
+
+                workh4.textContent = "Snekkar,Slippen Nørevågen";
+                worktext4.textContent = `
+                I regi av Herøy vidaregånde skule
+                2018 April   
+                `;
+
+
+                cvContentElement.appendChild(workh1);
+                cvContentElement.appendChild(worktext1);
+                cvContentElement.appendChild(workh2);
+                cvContentElement.appendChild(worktext2);
+                cvContentElement.appendChild(workh3);
+                cvContentElement.appendChild(worktext3);
+                cvContentElement.appendChild(workh4);
+                cvContentElement.appendChild(worktext4);
+                cvContentElement.appendChild(workh5);
+                cvContentElement.appendChild(worktext5);
+            };
+
             if (uniqueId === "cvcontentelement3-1") {
-                cvContentElement.textContent = "Languages";
+                cvContentElement.textContent = "Kurs";
             };
+            if (uniqueId === "cvcontentelement3-2") {
+
+                const coursesh1 = document.createElement("h1");
+                const coursestext1 = document.createElement("pre")
+                const coursesh2 = document.createElement("h1");
+                const coursestext2 = document.createElement("pre")
+                const coursesh3 = document.createElement("h1");
+                const coursestext3 = document.createElement("pre")
+
+                coursesh1.className = "coursestitle";
+                coursesh2.className = "coursestitle";
+                coursesh3.className = "coursestitle";
+                coursestext1.className = "coursestext";
+                coursestext2.className = "coursestext";
+                coursestext3.className = "coursestext";
+
+                coursesh1.textContent = "Kodehode";
+                coursestext1.textContent = `
+                2024 September - 2025
+                Full-Stack utvikler course 
+                `;
+
+                coursesh2.textContent = "Python online course";
+                coursestext2.textContent = `
+                "From zero to hero" Udemy.com  
+                `;
+
+                coursesh3.textContent = "Jobbklubb";
+                coursestext3.textContent = `
+                2019 September
+                Et kurs for hjelp til å skrive CV og Soknad.. 
+                `;
+
+                cvContentElement.appendChild(coursesh1);
+                cvContentElement.appendChild(coursestext1);
+                cvContentElement.appendChild(coursesh2);
+                cvContentElement.appendChild(coursestext2);
+                cvContentElement.appendChild(coursesh3);
+                cvContentElement.appendChild(coursestext3);
+            };
+
             if (uniqueId === "cvcontentelement4-1") {
-                cvContentElement.textContent = "Hobbies";
+                cvContentElement.textContent = "Tekniske erfaring";
+            };
+
+            if (uniqueId === "cvcontentelement4-2") {
+                const techtext1 = document.createElement("pre")
+                const techtext2 = document.createElement("pre")
+                const techtext3 = document.createElement("pre")
+                const techtext4 = document.createElement("pre")
+                const techtext5 = document.createElement("pre")
+                // const techtext6 = document.createElement("pre")
+                // const techtext7 = document.createElement("pre")
+                // const techtext8 = document.createElement("pre")
+                // const techtext9 = document.createElement("pre")
+
+                techtext1.className = "techtext";
+                techtext2.className = "techtext";
+                techtext3.className = "techtext";
+                techtext4.className = "techtext";
+                techtext5.className = "techtext";
+                // techtext6.className = "techtext";
+                // techtext7.className = "techtext";
+                // techtext8.className = "techtext";
+                // techtext9.className = "techtext";
+
+                techtext1.textContent = "Særs god kunnskap innan video,foto og lydredigering";
+                techtext2.textContent = "Jeg veit grunnleggande korleis ein programmerer produksjosnrobotar";
+                techtext3.textContent = "God kunnskap om byggning";
+                techtext4.textContent = "Lage logo for små bedrifta";
+                techtext5.textContent = `God kjennskap til:
+Ms Office, Camtasia studio, Inventor, AutoCAD, 
+Vegas Movie studio, JavaScript, Unity, HTML,
+CSS, React, Figma, GITHUB, Python,
+og annen lyd/video/bilderedigeringsprogramvare
+`
+
+                cvContentElement.appendChild(techtext1);
+                cvContentElement.appendChild(techtext2);
+                cvContentElement.appendChild(techtext3);
+                cvContentElement.appendChild(techtext4);
+                cvContentElement.appendChild(techtext5);
+            };
+
+            if (uniqueId === "cvcontentelement5-1") {
+                cvContentElement.textContent = "Ferdigheter";
+
+            };
+            if (uniqueId === "cvcontentelement4-2") {
+                const ferdighetertitle1 = document.createElement("h3");
+                ferdighetertitle1.textContent = "Språk:";
+                ferdighetertitle1.className = "ferdighetertitle1";
+                const ferdighetertext1 = document.createElement("pre");
+                ferdighetertext1.className = "ferdighetertext1";
+                ferdighetertext1.textContent=`
+Norsk
+Godt skriftlig og muntlig
+Litauisk
+Morsmål
+Engelsk
+Flytende skriftling og muntlig
+Russisk
+Grunnleggende
+`
+
+                const ferdighetertitle2 = document.createElement("h3")
+                ferdighetertitle2.textContent= "Interesser:";
+                ferdighetertitle2.className = "ferdighetertitle1";
+                const ferdighetertext2 = document.createElement("pre");
+                ferdighetertext2.className = "ferdighetertext1";
+                ferdighetertext2.textContent=`
+- Elsker å bruke fritden min på å lage prosjekter i REACT framwork.
+- Stor fan av NBA(National Basketball Assocation).
+- Likar å spela basketball og volleyball.
+- Stor dataspillopplevelse.
+- Interessant i ny teknologi.
+- Veldig bra i geografi og verdshistorie.
+- Godt på mattematikk og økonomi.
+- Sjakk.
+- Tegning.
+- Liker å jobba med visualle program som video, bilde,lydredigering.
+`               
+ 
+                cvContentElement.appendChild(ferdighetertitle1);
+                cvContentElement.appendChild(ferdighetertext1);
+                cvContentElement.appendChild(ferdighetertitle2);
+                cvContentElement.appendChild(ferdighetertext2);
+            };
+            if (uniqueId === "cvcontentelement6-1") {
+                cvContentElement.textContent = "Referanser";
             };
 
         }}};
@@ -473,11 +718,11 @@ planetElements.forEach((planetElements,index) => {
 
                 if (uniqueId === "contact1"){
                     contactcontenth1.textContent = "Email Address"
-                    contactcontentp.textContent = "My email address for later"
+                    contactcontentp.textContent = "Vilius0416@gmail.com"
                 }
                 if (uniqueId === "contact2"){
                     contactcontenth1.textContent = "Telephone Number"
-                    contactcontentp.textContent = "Telephone number for later"
+                    contactcontentp.textContent = "+4793955717"
                 }        
         }
         const githubdiv = document.createElement("div");
