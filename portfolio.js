@@ -130,7 +130,7 @@ planetElements.forEach((planetElements,index) => {
         cvmaininfo.className = "cvmaininfo";
         const cvmaininfo1div = document.createElement("div");
         cvmaininfo1div.className = "cvmaininfo1div";
-        cvmaininfo1div.textContent = "Picture here"
+        cvmaininfo1div.textContent = ""
         const cvmaininfo2div = document.createElement("div");
         cvmaininfo2div.className = "cvmaininfo2div";
         const cvmainheader = document.createElement("h1")
@@ -309,10 +309,10 @@ planetElements.forEach((planetElements,index) => {
                 coursestext2.className = "coursestext";
                 coursestext3.className = "coursestext";
 
-                coursesh1.textContent = "Kodehode";
+                coursesh1.textContent = "Jobloop AS - Kodehodekurs – IT utvikling";
                 coursestext1.textContent = `
                 2024 September - 2025
-                Full-Stack utvikler course 
+                Frontend kurs med valgfri backend modul.
                 `;
 
                 coursesh2.textContent = "Python online course";
@@ -323,7 +323,7 @@ planetElements.forEach((planetElements,index) => {
                 coursesh3.textContent = "Jobbklubb";
                 coursestext3.textContent = `
                 2019 September
-                Et kurs for hjelp til å skrive CV og Soknad.. 
+                Et kurs for hjelp til å skrive CV og Soknad. 
                 `;
 
                 cvContentElement.appendChild(coursesh1);
@@ -387,7 +387,7 @@ og annen lyd/video/bilderedigeringsprogramvare
                 ferdighetertitle1.className = "ferdighetertitle1";
                 const ferdighetertext1 = document.createElement("pre");
                 ferdighetertext1.className = "ferdighetertext1";
-                ferdighetertext1.textContent=`
+                const lines =`
 Norsk
 Godt skriftlig og muntlig
 Litauisk
@@ -396,7 +396,19 @@ Engelsk
 Flytende skriftling og muntlig
 Russisk
 Grunnleggende
-`
+`.trim().split('\n');
+
+    lines.forEach((line, index) => {
+        const span = document.createElement('span');
+        span.textContent = line;
+
+        if (index % 2 === 1) {
+            span.className = 'smallfont';
+        }
+
+        ferdighetertext1.appendChild(span);
+        ferdighetertext1.appendChild(document.createElement('br')); 
+    });
 
                 const ferdighetertitle2 = document.createElement("h3")
                 ferdighetertitle2.textContent= "Interesser:";
@@ -461,9 +473,11 @@ Grunnleggende
                     projectlink.textContent = "Link to GitHub"
                 }
                 if (uniqueId === "project3"){
-                    projecttitle.textContent = "PROJECT 3";
-                    projectdescription.textContent = "Project description";
-                    projectlink.textContent = "LINK"
+                    projecttitle.textContent = "A Cinema Website";
+                    projectdescription.textContent = "A project that I made a website for cinema, used REACT franework for this project";
+                    projectlink.href ="https://github.com/ViliusKodehode/Oppgave4";
+                    projectlink.target="_blank"
+                    projectlink.textContent = "Link to GitHub"
                 }
                 if (uniqueId === "project4"){
                     projecttitle.textContent = "PROJECT 4"

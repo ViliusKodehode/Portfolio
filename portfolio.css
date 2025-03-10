@@ -516,8 +516,19 @@ body, html{
 }
 
 .ferdighetertitle1{
+    font-size: 1.7rem;
     padding-top: 20px;
     color: bisque;
+}
+.smallfont{
+    font-size: 1rem;
+    color: rgb(9, 8, 8);
+    font-weight: 800;
+    
+}
+.ferdighetertext1{
+    font-weight: bold;
+    font-weight: 1.4rem;
 }
 
 @keyframes blink{
